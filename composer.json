@@ -1,0 +1,45 @@
+{
+    "name": "kimisme9386/driver-line",
+    "license": "MIT",
+    "description": "line driver for botman",
+    "type": "library",
+    "require": {
+        "php": ">=7.0",
+        "botman/botman": "~2.1"
+    },
+    "require-dev": {
+        "botman/studio-addons": "~1.0",
+        "phpunit/phpunit": "~5.0",
+        "illuminate/console": "~5.0",
+        "illuminate/support": "~5.0",
+        "mockery/mockery": "dev-master",
+        "ext-curl": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "BotMan\\Drivers\\Line\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "cs": "php-cs-fixer fix"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "BotMan\\Drivers\\Line\\Providers\\LineServiceProvider"
+            ]
+        }
+    },
+    "authors": [
+        {
+            "name": "Chris Yang",
+            "email": "kimisme9386@gmail.com"
+        }
+    ]
+}

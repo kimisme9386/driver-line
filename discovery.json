@@ -1,0 +1,8 @@
+{
+  "botman/driver-config": [
+    "stubs/line.php"
+  ],
+  "botman/driver": [
+    "BotMan\\Drivers\\Line\\LineDriver"
+  ]
+}

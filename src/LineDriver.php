@@ -156,4 +156,16 @@ class LineDriver extends HttpDriver
     {
         return !empty($this->config->get('token'));
     }
+
+    /**
+     * Low-level method to perform driver specific API requests.
+     *
+     * @param string $endpoint
+     * @param array $parameters
+     * @param IncomingMessage $matchingMessage
+     * @return Response
+     */
+    public function sendRequest($endpoint, array $parameters, IncomingMessage $matchingMessage)
+    {
+    }
 }

@@ -10,7 +10,7 @@ return [
     | Your Line bot token.
     |
     */
-    'token' => env('Line_TOKEN'),
+    'token' => env('LINE_TOKEN'),
 
     /*
     |--------------------------------------------------------------------------

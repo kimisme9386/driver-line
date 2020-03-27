@@ -28,6 +28,7 @@
     },
     "scripts": {
         "cs": "vendor/bin/phpcs",
+        "cs-fix": "vendor/bin/phpcbf",
         "test": "vendor/bin/phpunit --coverage-clover=coverage.xml",
         "check": [
             "@cs",

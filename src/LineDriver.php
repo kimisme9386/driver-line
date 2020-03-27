@@ -38,8 +38,10 @@ class LineDriver extends HttpDriver
      */
     protected function validateSignature()
     {
-        return hash_equals($this->signature,
-            base64_encode(hash_hmac('sha256', $this->content, $this->config->get('channel_secret'), true)));
+        return hash_equals(
+            $this->signature,
+            base64_encode(hash_hmac('sha256', $this->content, $this->config->get('channel_secret'), true))
+        );
     }
 
     /**

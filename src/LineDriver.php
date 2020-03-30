@@ -31,6 +31,7 @@ class LineDriver extends HttpDriver
         $this->signature = $request->headers->get('X-Line-Signature', '');
         $this->content = $request->getContent();
         $this->event = Collection::make((array)$this->payload->get('events'));
+        $this->config = Collection::make($this->config->get('line', []));
     }
 
     /**
@@ -55,7 +56,7 @@ class LineDriver extends HttpDriver
         if (!$this->signature) {
             return false;
         }
-        if ($this->signature && !$this->validateSignature()) {
+        if (!$this->validateSignature()) {
             throw new WebHookSignatureException('Line WebHook validate exception, Please check your channel_secret');
         }
         return true;

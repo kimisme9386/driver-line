@@ -20,5 +20,5 @@ return [
     | Your Line bot channel secret.
     |
     */
-    'channel_secret' => env('channel_secret')
+    'channel_secret' => env('CHANNEL_SECRET')
 ];
